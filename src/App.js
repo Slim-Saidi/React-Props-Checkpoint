@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Profile from './Profile/Profile'
+import Pic from './50cent.jpg';
+
 
 function App() {
+  
+  const fullname = 'Curtis "50 Cent" Jackson'
+  const bio = 'King of the streets'
+  const profession = 'Rapper, actor and producer'
+  const showName =(fullname) =>  {
+    alert(fullname)
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+      <Profile
+      fullname = {fullname}
+      bio = {bio}
+      profession = {profession}
+      thisname = {showName}
+      >
+      <img src={Pic} alt="" width="700"  />
+      </Profile>
+      </>
     </div>
   );
 }
